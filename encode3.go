@@ -5,22 +5,21 @@ package flatetest
 // license that can be found in the LICENSE file.
 
 import (
-	"compress/flate"
 	"errors"
 	"io"
 	"sync"
+
+	flate2 "github.com/klauspost/compress/flate"
 )
 
-var ErrWriteClosed = errors.New("write close")
-
 const (
-	minCompressionLevel     = -2 // flate.HuffmanOnly not defined in Go < 1.6
-	maxCompressionLevel     = flate.BestCompression
-	defaultCompressionLevel = 1
+	minCompressionLevel2     = -2 // flate.HuffmanOnly not defined in Go < 1.6
+	maxCompressionLevel2     = flate2.BestCompression
+	defaultCompressionLevel2 = 1
 )
 
 var (
-	flateWriterPools [maxCompressionLevel - minCompressionLevel + 1]sync.Pool
+	flateWriterPools2 [maxCompressionLevel - minCompressionLevel + 1]sync.Pool
 )
 
 /*
@@ -29,27 +28,27 @@ func isValidCompressionLevel(level int) bool {
 }
 */
 
-func compressNoContextTakeover(w io.WriteCloser, level int) io.WriteCloser {
-	p := &flateWriterPools[level-minCompressionLevel]
-	tw := &truncWriter{w: w}
-	fw, _ := p.Get().(*flate.Writer)
+func compressNoContextTakeover2(w io.WriteCloser, level int) io.WriteCloser {
+	p := &flateWriterPools2[level-minCompressionLevel2]
+	tw := &truncWriter2{w: w}
+	fw, _ := p.Get().(*flate2.Writer)
 	if fw == nil {
-		fw, _ = flate.NewWriter(tw, level)
+		fw, _ = flate2.NewWriter(tw, level)
 	} else {
 		fw.Reset(tw)
 	}
-	return &flateWriteWrapper{fw: fw, tw: tw, p: p}
+	return &flateWriteWrapper2{fw: fw, tw: tw, p: p}
 }
 
 // truncWriter is an io.Writer that writes all but the last four bytes of the
 // stream to another io.Writer.
-type truncWriter struct {
+type truncWriter2 struct {
 	w io.WriteCloser
 	n int
 	p [4]byte
 }
 
-func (w *truncWriter) Write(p []byte) (int, error) {
+func (w *truncWriter2) Write(p []byte) (int, error) {
 	n := 0
 
 	// fill buffer first for simplicity.
@@ -77,20 +76,20 @@ func (w *truncWriter) Write(p []byte) (int, error) {
 	return n + nn, err
 }
 
-type flateWriteWrapper struct {
-	fw *flate.Writer
-	tw *truncWriter
+type flateWriteWrapper2 struct {
+	fw *flate2.Writer
+	tw *truncWriter2
 	p  *sync.Pool
 }
 
-func (w *flateWriteWrapper) Write(p []byte) (int, error) {
+func (w *flateWriteWrapper2) Write(p []byte) (int, error) {
 	if w.fw == nil {
 		return 0, ErrWriteClosed
 	}
 	return w.fw.Write(p)
 }
 
-func (w *flateWriteWrapper) Close() error {
+func (w *flateWriteWrapper2) Close() error {
 	if w.fw == nil {
 		return ErrWriteClosed
 	}
