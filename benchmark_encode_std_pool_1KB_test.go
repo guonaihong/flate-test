@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func Benchmark_Encode_WithPool_9(b *testing.B) {
+func Benchmark_Encode_WithPool_9_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -22,7 +22,7 @@ func Benchmark_Encode_WithPool_9(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_8(b *testing.B) {
+func Benchmark_Encode_WithPool_8_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -39,7 +39,7 @@ func Benchmark_Encode_WithPool_8(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_7(b *testing.B) {
+func Benchmark_Encode_WithPool_7_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -55,7 +55,7 @@ func Benchmark_Encode_WithPool_7(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_6(b *testing.B) {
+func Benchmark_Encode_WithPool_6_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -71,7 +71,7 @@ func Benchmark_Encode_WithPool_6(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_5(b *testing.B) {
+func Benchmark_Encode_WithPool_5_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -88,7 +88,7 @@ func Benchmark_Encode_WithPool_5(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_4(b *testing.B) {
+func Benchmark_Encode_WithPool_4_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -104,7 +104,7 @@ func Benchmark_Encode_WithPool_4(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_3(b *testing.B) {
+func Benchmark_Encode_WithPool_3_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -120,7 +120,7 @@ func Benchmark_Encode_WithPool_3(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_1(b *testing.B) {
+func Benchmark_Encode_WithPool_1_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())

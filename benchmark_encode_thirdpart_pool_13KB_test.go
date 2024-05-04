@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func Benchmark_Encode_WithPool_3_9_13KB(b *testing.B) {
+func Benchmark_Encode_WithPool_thirdpart_9_13KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -22,7 +22,7 @@ func Benchmark_Encode_WithPool_3_9_13KB(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_3_8_13KB(b *testing.B) {
+func Benchmark_Encode_WithPool_thirdpart_8_13KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -39,7 +39,7 @@ func Benchmark_Encode_WithPool_3_8_13KB(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_3_7_13KB(b *testing.B) {
+func Benchmark_Encode_WithPool_thirdpart_7_13KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -55,7 +55,7 @@ func Benchmark_Encode_WithPool_3_7_13KB(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_3_6_13KB(b *testing.B) {
+func Benchmark_Encode_WithPool_thirdpart_6_13KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -71,7 +71,7 @@ func Benchmark_Encode_WithPool_3_6_13KB(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_3_5_13KB(b *testing.B) {
+func Benchmark_Encode_WithPool_thirdpart_5_13KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -88,7 +88,7 @@ func Benchmark_Encode_WithPool_3_5_13KB(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_3_4_13KB(b *testing.B) {
+func Benchmark_Encode_WithPool_thirdpart_4_13KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -104,7 +104,7 @@ func Benchmark_Encode_WithPool_3_4_13KB(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_3_3_13KB(b *testing.B) {
+func Benchmark_Encode_WithPool_thirdpart_3_13KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -120,7 +120,7 @@ func Benchmark_Encode_WithPool_3_3_13KB(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_WithPool_3_1_13KB(b *testing.B) {
+func Benchmark_Encode_WithPool_thirdpart_1_13KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())

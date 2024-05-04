@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func Benchmark_Encode_3_9(b *testing.B) {
+func Benchmark_Encode_thirdpart_9_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -19,7 +19,7 @@ func Benchmark_Encode_3_9(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_3_8(b *testing.B) {
+func Benchmark_Encode_thirdpart_8_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -32,7 +32,7 @@ func Benchmark_Encode_3_8(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_3_7(b *testing.B) {
+func Benchmark_Encode_thirdpart_7_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -45,7 +45,7 @@ func Benchmark_Encode_3_7(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_3_6(b *testing.B) {
+func Benchmark_Encode_thirdpart_6_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -58,7 +58,7 @@ func Benchmark_Encode_3_6(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_3_5(b *testing.B) {
+func Benchmark_Encode_thirdpart_5_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -72,7 +72,7 @@ func Benchmark_Encode_3_5(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_3_4(b *testing.B) {
+func Benchmark_Encode_thirdpart_4_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -85,7 +85,7 @@ func Benchmark_Encode_3_4(b *testing.B) {
 	}
 }
 
-func Benchmark_Encode_3_3(b *testing.B) {
+func Benchmark_Encode_thirdpart_3_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
@@ -97,8 +97,7 @@ func Benchmark_Encode_3_3(b *testing.B) {
 		w.Close()
 	}
 }
-
-func Benchmark_Encode_3_1(b *testing.B) {
+func Benchmark_Encode_thirdpart_1_1KB(b *testing.B) {
 	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
