@@ -2,6 +2,7 @@
 
 测试flate性能的仓库
 
+```console
 goos: linux
 goarch: amd64
 pkg: github.com/guonaihong/flate-test
@@ -64,3 +65,5 @@ Benchmark_Encode_WithPool_thirdpart_3_1KB-16              105606             113
 Benchmark_Encode_WithPool_thirdpart_1_1KB-16              117613             10163 ns/op
 PASS
 ok      github.com/guonaihong/flate-test        82.094s
+
+```
