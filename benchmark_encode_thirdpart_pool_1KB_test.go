@@ -7,7 +7,7 @@ import (
 )
 
 func Benchmark_Encode_WithPool_3_9(b *testing.B) {
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -23,7 +23,7 @@ func Benchmark_Encode_WithPool_3_9(b *testing.B) {
 }
 
 func Benchmark_Encode_WithPool_3_8(b *testing.B) {
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -40,7 +40,7 @@ func Benchmark_Encode_WithPool_3_8(b *testing.B) {
 }
 
 func Benchmark_Encode_WithPool_3_7(b *testing.B) {
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -56,7 +56,7 @@ func Benchmark_Encode_WithPool_3_7(b *testing.B) {
 }
 
 func Benchmark_Encode_WithPool_3_6(b *testing.B) {
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -72,7 +72,7 @@ func Benchmark_Encode_WithPool_3_6(b *testing.B) {
 }
 
 func Benchmark_Encode_WithPool_3_5(b *testing.B) {
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -89,7 +89,7 @@ func Benchmark_Encode_WithPool_3_5(b *testing.B) {
 }
 
 func Benchmark_Encode_WithPool_3_4(b *testing.B) {
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -105,7 +105,7 @@ func Benchmark_Encode_WithPool_3_4(b *testing.B) {
 }
 
 func Benchmark_Encode_WithPool_3_3(b *testing.B) {
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -121,7 +121,7 @@ func Benchmark_Encode_WithPool_3_3(b *testing.B) {
 }
 
 func Benchmark_Encode_WithPool_3_1(b *testing.B) {
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/1KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}

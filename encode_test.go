@@ -11,7 +11,7 @@ import (
 
 func Test_Encode(t *testing.T) {
 
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -30,7 +30,7 @@ func Test_Encode(t *testing.T) {
 
 func Test_Encode2(t *testing.T) {
 
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -60,7 +60,7 @@ func Test_Encode2(t *testing.T) {
 
 func Test_Encode3(t *testing.T) {
 	// 要压缩的数据
-	dat, err := os.ReadFile("./testdata/1.txt")
+	dat, err := os.ReadFile("./testdata/13KB.txt")
 	if err != nil {
 		panic(err.Error())
 	}
